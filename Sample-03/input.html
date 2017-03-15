@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>メッセージ入力</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>メッセージ入力</h1>
+
+<div id="menu">
+  <ul>
+    <li><a href="index.php">掲示板メニュー</a></li>
+    <li><a href="index.php?action=list">メッセージ一覧</a></li>
+    <li><a href="index.php?action=input">メッセージ入力</a></li>
+    <li><a href="../../wiki/index.php">wikiに戻る</a></li>
+  </ul>
+</div>
+
+<div id="contents">
+  <p>名前、タイトル、メッセージをすべて入力してください。</p>
+  <div id="input">
+    <form name="form_input" method="post" action="index.php">
+      <input type="hidden" name="action" value="input">
+      <div id="name">名前<br>
+        <input type="text" name="name" value="<?=$view['name'];?>">
+      </div>
+      <div id="title">タイトル<br>
+        <input type="text" name="title" value="<?=$view['title'];?>">
+      </div>
+      <div id="message">メッセージ<br>
+        <textarea name="message"><?=$view['message'];?></textarea>
+      </div>
+      <input type="submit" name="submit" value="送信">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

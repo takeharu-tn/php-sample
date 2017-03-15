@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+/* (参考) http://labs.unoh.net/2007/07/horizontal-navigation.html */
+
+#menu {
+    list-style: none;
+}
+
+#menu li {
+    float: left;
+    background: transparent url(arrow.gif) no-repeat scroll left center;
+    padding-left: 15px;
+    margin-right: 10px;
+}
+
+#contents {
+    clear: left;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+td, th {
+	border-collapse:collapse;
+	border-spacing:0px;
+	border:1px solid #FF4040;
+}

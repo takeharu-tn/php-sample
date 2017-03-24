@@ -1,15 +1,11 @@
 <?php
-# No. 01
-$mysqli = new mysqli( "localhost" , "testuser" , "testpassword" , "oop_test" );
-# No. 02
+$mysqli = new mysqli( "localhost" , "test_username" , "test_password" , "oop_test" );
 if( $mysqli->connect_errno ) {
 	echo 'データベースアクセスエラー';
 	exit;
 }
 
-# No. 03
 $query = "INSERT INTO message (name, title, message, create_date) VALUES (\"ユーザー\", \"テスト\", \"メモメモ\", NOW() )";
-# No. 04
 if( $mysqli->query( $query ) ) {
 	echo 'INSERT成功';
 }
@@ -18,5 +14,3 @@ else {
 }
 $mysqli->close();
 ?>
-解説
-# No. 01
